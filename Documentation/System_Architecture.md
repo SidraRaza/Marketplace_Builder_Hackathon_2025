@@ -12,12 +12,9 @@ This document outlines the architecture of the marketplace system, describing th
 
 ---
 
-|-----------------|      |----------------------|      |----------------------|
-|                 |      |                      |      |                      |
-|    **Frontend** | ---> |       **Backend**    | ---> |  **Third-Party APIs**|
-|    `(Next.js)`  |      |     `(Sanity CMS)`   |      | `(e.g., Payments,`   |
-|                 | <--- |                      | <--- | `Shipment Tracking)` |
-|-----------------|      |----------------------|      |----------------------|
+| **Frontend**        | **Backend**        | **Third-Party APIs**  |
+|----------------------|--------------------|-----------------------|
+| **(Next.js)**        | **(Sanity CMS)**  | **(e.g., Payments, Shipment Tracking)** |
 
 ### System Components
 
