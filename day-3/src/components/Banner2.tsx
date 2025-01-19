@@ -37,10 +37,10 @@ const Banner2 = () => {
           </h3>
 
           <div className="w-full lg:w-[339px] h-[52px] flex lg:justify-between justify-center items-center lg:gap-[10px] gap-[10px] mt-4 ">
-            <div className="lg:w-[158px] w-[140px] flex justify-center bg-[#2DC071] text-white text-[14px] leading-[22px] font-bold lg:px-[40px] lg:py-[10px] px-6 py-3 rounded-md">
+            <div className="lg:w-[158px] w-[140px] flex justify-center bg-[#2DC071] hover:bg-black text-white text-[14px] leading-[22px] font-bold lg:px-[40px] lg:py-[10px] px-6 py-3 rounded-md">
               <button className="sm:w-[100px] w-[152px] h-[42px]">BUY NOW</button>
             </div>
-            <div className="lg:w-[173px] w-[150px] flex justify-center border border-[#2DC071] bg-white text-[#2DC071] text-[14px] leading-[22px] font-bold lg:px-[40px] lg:py-[10px] px-3 py-2 rounded-md">
+            <div className="lg:w-[173px] w-[150px] flex justify-center border hover:bg-black border-[#2DC071] bg-white hover:text-white text-[#2DC071] text-[14px] leading-[22px] font-bold lg:px-[40px] lg:py-[10px] px-3 py-2 rounded-md">
               <button className="sm:w-[130px] w-[173px] h-[42px]">READ MORE</button>
             </div>
           </div>

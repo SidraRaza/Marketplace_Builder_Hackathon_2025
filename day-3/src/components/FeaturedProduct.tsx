@@ -30,7 +30,7 @@ const FeaturedProduct = () => {
           </h1>
         </div>
         <div className="lg:w-[1049px] lg:h-[615px] w-[328px] h-[2550px] flex justify-center sm:flex-row flex-col items-center gap-[30px] mt-[50px] lg:mt-0">
-          <div className="lg:w-[238px] w-[328px] h-[615px] flex justify-center  items-center flex-col">
+          <div className="lg:w-[238px] w-[328px] h-[615px] flex justify-center hover:shadow-md transition-all duration-200 hover:scale-105  items-center flex-col">
             <Link href={'/ProductList'}>
             <Image
               src={"/f1.svg"}
@@ -71,7 +71,7 @@ const FeaturedProduct = () => {
             </Link>
           </div>
           {/* 2 */}
-          <div className="lg:w-[238px] w-[348px] h-[615px] flex justify-center items-center flex-col">
+          <div className="lg:w-[238px] w-[348px] h-[615px] flex justify-center hover:shadow-md transition-all duration-200 hover:scale-105  items-center flex-col">
           <Link href={'/ProductList'}>
             <Image
               src={"/f4.svg"}
@@ -112,7 +112,7 @@ const FeaturedProduct = () => {
             </Link>
           </div>
           {/* 3 */}
-          <div className="lg:w-[238px] w-[348px]  h-[615px] flex justify-center items-center flex-col">
+          <div className="lg:w-[238px] w-[348px] hover:shadow-md transition-all duration-200 hover:scale-105   h-[615px] flex justify-center items-center flex-col">
           <Link href={'/ProductList'}>
             <Image src={"/f5.svg"} alt="img" width={239} height={427} 
             className="hidden lg:block"/>
@@ -148,7 +148,7 @@ const FeaturedProduct = () => {
             </Link>
           </div>
           {/* 4 */}
-          <div className="lg:w-[238px] w-[348px] h-[615px] flex justify-center items-center flex-col">
+          <div className="lg:w-[238px] w-[348px] hover:shadow-md transition-all duration-200 hover:scale-105  h-[615px] flex justify-center items-center flex-col">
           <Link href={'/ProductList'}>
             <Image src={"/f6.svg"} alt="img" width={239} height={427} 
             className="hidden lg:block"/>
@@ -186,7 +186,7 @@ const FeaturedProduct = () => {
         </div>
         {/* 2nd row */}
         <div className="lg:w-[1049px] lg:h-[615px] w-[328px] h-[2550px] flex justify-center sm:flex-row flex-col items-center gap-[30px]">
-          <div className="lg:w-[238px] w-[348px] h-[615px] flex justify-center items-center flex-col">
+          <div className="lg:w-[238px] w-[348px] hover:shadow-md transition-all duration-200 hover:scale-105  h-[615px] flex justify-center items-center flex-col">
           <Link href={'/ProductList'}>
             <Image src={"/f10.svg"} alt="img" width={239} height={427} 
             className="hidden lg:block"/>
@@ -222,7 +222,7 @@ const FeaturedProduct = () => {
             </Link>
           </div>
           {/* 6 */}
-          <div className="lg:w-[238px] w-[348px] h-[615px] flex justify-center items-center flex-col">
+          <div className="lg:w-[238px] w-[348px] h-[615px] hover:shadow-md transition-all duration-200 hover:scale-105  flex justify-center items-center flex-col">
           <Link href={'/ProductList'}>
             <Image src={"/f9.svg"} alt="img" width={239} height={427} 
             className="hidden lg:block"/>
@@ -258,7 +258,7 @@ const FeaturedProduct = () => {
             </Link>
           </div>
           {/* 7 */}
-          <div className="lg:w-[238px] w-[348px] h-[615px] flex justify-center items-center flex-col">
+          <div className="lg:w-[238px] w-[348px] h-[615px] hover:shadow-md transition-all duration-200 hover:scale-105  flex justify-center items-center flex-col">
           <Link href={'/ProductList'}>
             <Image src={"/f8.svg"} alt="img" width={239} height={427}
             className="hidden lg:block" />
@@ -294,7 +294,7 @@ const FeaturedProduct = () => {
             </Link>
           </div>
           {/* 8 */}
-          <div className="lg:w-[238px] w-[348px] h-[615px] flex justify-center items-center flex-col ">
+          <div className="lg:w-[238px] w-[348px] h-[615px] hover:shadow-md transition-all duration-200 hover:scale-105  flex justify-center items-center flex-col ">
           <Link href={'/ProductList'}>
             <Image src={"/f7.svg"} alt="img" width={239} height={427} 
             className="hidden lg:block"/>

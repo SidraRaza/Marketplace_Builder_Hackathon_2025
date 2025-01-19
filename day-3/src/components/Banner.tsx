@@ -18,7 +18,7 @@ const Banner = () => {
           <div className="w-full sm:w-auto flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <h3 className="text-[20px] lg:text-[24px] leading-[28px] lg:leading-[32px] font-bold">$16.48</h3>
             <Link href={"#"}>
-            <button className="w-[184px] sm:w-auto bg-[#2DC071] text-white text-[14px] leading-[22px] font-bold lg:px-6 lg:py-3 px-1 py-4 rounded-md">
+            <button className="w-[184px] sm:w-auto bg-[#2DC071] hover:bg-black text-white text-[14px] leading-[22px] font-bold lg:px-6 lg:py-3 px-1 py-4 rounded-md">
               ADD TO CART
             </button>
             </Link>

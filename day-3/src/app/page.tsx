@@ -2,6 +2,7 @@ import B from '@/components/B'
 import Banner from '@/components/Banner'
 import Banner2 from '@/components/Banner2'
 import FeaturedProduct from '@/components/FeaturedProduct'
+import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import Hero2 from '@/components/Hero2'
@@ -20,7 +21,7 @@ const page = () => {
       <Banner/>
      <Banner2/>
      <PracticeAdvice/>
- <B/>
+ <Footer/>
     </div>
   )
 }

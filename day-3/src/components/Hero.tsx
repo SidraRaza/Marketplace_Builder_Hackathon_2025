@@ -38,8 +38,8 @@ function Hero() {
                           We know how large objects will act, but things on a
                           small scale.
                         </p>
-                        <div className="w-56 h-14 flex justify-center items-center bg-green-600 text-white rounded-md">
-                          <button className="md:text-lg  text-md font-bold">Shop Now</button>
+                        <div className="w-56 h-14 flex justify-center items-center hover:bg-black bg-green-600 text-white rounded-md">
+                          <button className="md:text-lg  text-md font-bold ">Shop Now</button>
                         </div>
                       </div>
                     </div>
