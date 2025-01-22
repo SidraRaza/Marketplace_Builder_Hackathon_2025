@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Header from "@/components/Header";
 import { client } from "@/sanity/lib/client";
 import imageUrlBuilder from "@sanity/image-url";
+import { log } from "console";
 
 interface Products {
   id: number;
@@ -21,7 +22,7 @@ interface Products {
 }
 
 const builder = imageUrlBuilder(client);
-function urlFor(source: any) {
+function urlFor(source: string) {
   return builder.image(source);
 }
 
@@ -55,13 +56,16 @@ const Carddetails = ({ params }: { params: { id: string } }) => {
         } else {
           setError("Product not found.");
         }
+          
       } catch (error) {
         setError("Failed to fetch product.");
-      } finally {
+        
+      } 
+      finally {
         setLoading(false);
       }
     };
-
+    console.log(error);
     fetchProduct();
   }, [params.id]);
 

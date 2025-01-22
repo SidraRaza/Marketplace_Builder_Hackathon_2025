@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React, { useEffect, useState } from "react";
 import { useCart } from "../context/CartContext";
 import Image from "next/image";
@@ -7,25 +7,28 @@ import "react-toastify/dist/ReactToastify.css";
 import Header from "@/components/Header";
 import { client } from "@/sanity/lib/client";
 import imageUrlBuilder from "@sanity/image-url";
+import { use } from "react";
 
 interface Products {
   id: number;
-  image?: string;
+  image: string;
   title: string;
-  description?: string;
-  price1: number; // Rename to price if needed
-  price2: number; // Rename to discountedPrice if needed
-  category?: string; // Add missing fields
-  rating?: number;
-  price?:number|undefined   // Add missing fields
+  description: string;
+  price1: number;
+  price2: number;
+  price: number;
+  category: string;
 }
+ 
 
 const builder = imageUrlBuilder(client);
-function urlFor(source: any) {
+function urlFor(source: string) {
   return builder.image(source);
 }
 
-const Carddetails = ({ params }: { params: { id: string } }) => {
+
+const Carddetails = ({ params }: { params: Promise<{ id: string }> }) => {
+  const resolvedParams = use(params);
   const [product, setProduct] = useState<Products | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -35,27 +38,28 @@ const Carddetails = ({ params }: { params: { id: string } }) => {
     const fetchProduct = async () => {
       try {
         const productData = await client.fetch(
-          `*[_types == product && id == $id][0]`,
-          { id: params.id }
-         
-          
+          `*[_type == "product" && id == $id][0]`,
+          { id: resolvedParams.id }
         );
-        console.log(productData);
 
         if (productData) {
           const product: Products = {
-            id: productData.id,
+            id: productData.id.toString(),
             title: productData.title,
             description: productData.description,
             price1: productData.price,
             price2: productData.discountedPrice || productData.price,
             image: productData.image,
+            price: productData.price,
+            category: productData.category ||""
+
           };
           setProduct(product);
         } else {
           setError("Product not found.");
         }
       } catch (error) {
+        console.error(error);
         setError("Failed to fetch product.");
       } finally {
         setLoading(false);
@@ -63,7 +67,7 @@ const Carddetails = ({ params }: { params: { id: string } }) => {
     };
 
     fetchProduct();
-  }, [params.id]);
+  }, [resolvedParams.id]);
 
   if (loading)
     return (
@@ -94,15 +98,15 @@ const Carddetails = ({ params }: { params: { id: string } }) => {
       <Header />
       <div className="container mx-auto p-6 flex flex-col lg:flex-row justify-center h-screen items-center gap-12">
         <div className="w-full lg:w-1/2 flex justify-center">
-          <div className="relative ">
+          <div className="relative">
             <Image
               src={
                 product?.image ? urlFor(product.image).url() : "/fallback-image.jpg"
               }
               alt={product?.title || "No Title"}
-             width={400}
-             height={300}
-              className="rounded-lg  w-[600px] h-[400px]"
+              width={400}
+              height={300}
+              className="rounded-lg w-[600px] h-[400px]"
             />
           </div>
         </div>

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 import { Montserrat } from "next/font/google";
-import Footer from "@/components/Footer";
 import { CartProvider } from "./ProductList/context/CartContext";
 import { HeartProvider } from "./ProductList/contexHeart/context";
 

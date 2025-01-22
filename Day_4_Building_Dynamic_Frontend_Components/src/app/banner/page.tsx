@@ -24,9 +24,11 @@ function B() {
                   <CardContent>
                     {/* Large Screen View */}
                     <div className="hidden md:block  w-full lg:w-[1440px] md:w-[689px] lg:h-[716px] h-screen">
-                      <img
+                      <Image 
                         src="/shop-hero.svg"
                         alt="Banner Image"
+                        width={1440}
+                        height={716}
                         className="absolute inset-0 w-full h-full object-cover"
                       />
                       <div className="absolute left-[100px] top-0 w-[50%] h-full flex flex-col justify-center text-white gap-8 ">

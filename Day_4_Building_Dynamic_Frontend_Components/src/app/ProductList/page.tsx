@@ -9,7 +9,7 @@ import Link from 'next/link';
 import Footer from '@/components/Footer';
 
 const builder = imageUrlBuilder(client);
-function urlFor(source: any) {
+function urlFor(source: string) {
   return builder.image(source);
 }
 
@@ -20,7 +20,7 @@ interface Product {
   description: string;
   price1: number;
   price2: number;
-  image: any;
+  image: string;
 }
 
 async function fetchProductList(): Promise<Product[]> {
