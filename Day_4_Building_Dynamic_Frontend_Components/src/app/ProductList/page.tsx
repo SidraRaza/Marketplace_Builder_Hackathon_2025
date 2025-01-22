@@ -23,19 +23,16 @@ interface Product {
   image: string;
 }
 
-
-
-async function fetchProductList() {
-  const [error, setError] = useState(false);
+async function fetchProductList(): Promise<Product[]> {
   try {
     const products = await client.fetch('*[_type == "product"]');
     return products;
-  } catch (err) {
-    setError(true);
-    console.error('Failed to fetch products:', err);
+  } catch (error) {
+    console.error('Failed to fetch products:', error);
     return [];
   }
 }
+
  function ProductList() {
   const [products, setProducts] = useState<Product[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
